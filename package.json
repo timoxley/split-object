@@ -1,0 +1,16 @@
+{
+  "name": "split-object",
+  "version": "1.0.0",
+  "description": "Work with Objects using built-in functional Array methods",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Tim Oxley <secoif@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "tape": "^3.0.3"
+  },
+  "devDependencies": {}
+}
