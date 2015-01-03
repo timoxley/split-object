@@ -4,13 +4,31 @@
   "description": "Work with Objects using built-in functional Array methods",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape test.js | tap-spec"
   },
-  "keywords": [],
+  "keywords": [
+    "object",
+    "map",
+    "functional",
+    "collection",
+    "array",
+    "dict",
+    "hash",
+    "dictionary"
+  ],
   "author": "Tim Oxley <secoif@gmail.com>",
-  "license": "ISC",
-  "dependencies": {
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "tap-spec": "^2.1.2",
     "tape": "^3.0.3"
   },
-  "devDependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timoxley/split-object.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timoxley/split-object/issues"
+  },
+  "homepage": "https://github.com/timoxley/split-object"
 }
