@@ -47,4 +47,14 @@ test('multi-key object', function(t) {
   t.end()
 })
 
-
+test('prototype properties are not iterated', function(t) {
+  var proto = {bad: true}
+  var obj = Object.create(proto)
+  obj.good = true
+  t.deepEqual(split(obj), [{key: 'good', value: true}], 'split ignores proto properties')
+  proto.hasOwnProperty = function() {return true}
+  t.deepEqual(split(obj), [{key: 'good', value: true}], 'split ignores overwritten hasOwnProperty on proto')
+  obj.hasOwnProperty = function() {return true}
+  t.deepEqual(split(obj), [{key: 'good', value: true}, {key: 'hasOwnProperty', value: obj.hasOwnProperty}], 'split ignores overwritten hasOwnProperty on instance')
+  t.end()
+})
