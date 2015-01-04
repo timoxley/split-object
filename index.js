@@ -7,7 +7,9 @@ module.exports.join = join
 function split(obj) {
   var items = []
   for (var key in obj) {
-    items.push({key: key, value: obj[key]})
+    if (obj.hasOwnProperty(key)) {
+      items.push({key: key, value: obj[key]})
+    }
   }
   return items
 }
