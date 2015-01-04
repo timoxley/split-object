@@ -13,7 +13,7 @@ test("sanity", function(t) {
 })
 
 test('empty object', function(t) {
-  t.deepEqual(split({}), [], 'itemize({}) creates empty array')
+  t.deepEqual(split({}), [], 'split({}) creates empty array')
   t.deepEqual(join([]), {}, 'join([]) creates empty object')
   t.end()
 })
