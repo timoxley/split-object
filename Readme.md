@@ -60,26 +60,26 @@ var loudSalad = split.join(loudIngredients)
 
 ## Examples
 
-### Iterating Values
+### Iterating Keys & Values
 
 ```js
 // with object-split
-split(salad).forEach(function(kv) {
-  console.log(item)
+split(salad).forEach(function(item) {
+  console.log(item.key, item.value)
 })
 ```
 
 ```js
 // without object-split
 Object.keys(salad).forEach(function(key) {
-  var item = salad[key]
-  console.log(item)
+  var value = salad[key]
+  console.log(key, value)
 })
 
 // or
 for (var key in salad) {
-  var item = salad[key]
-  console.log(item)
+  var value = salad[key]
+  console.log(key, value)
 }
 ```
 
@@ -89,11 +89,11 @@ for (var key in salad) {
 // with object-split
 var pieces = split(salad)
 .map(function(kv) {
-  kv.value = calculate(value)
+  kv.value = calculate(kv.value)
   return kv
 })
 .map(function(kv) {
-  kv.value = recalculate(value)
+  kv.value = recalculate(kv.value)
   return kv
 })
 var newSalad = split.join(pieces)
@@ -119,8 +119,8 @@ newSalad = Object.keys(newSalad)
 }, {})
 ```
 
-As you can see, `split-object` doesn't save a huge number of lines, but it
-saves on some complexity, enables chaining and removes the hassle
+`split-object` doesn't save a huge number of lines, but it
+saves some complexity, enables easier chaining and removes the hassle
 of extracting the value from the object on each iteration.
 
 ## License
