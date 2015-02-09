@@ -58,3 +58,22 @@ test('prototype properties are not iterated', function(t) {
   t.deepEqual(split(obj), [{key: 'good', value: true}, {key: 'hasOwnProperty', value: obj.hasOwnProperty}], 'split ignores overwritten hasOwnProperty on instance')
   t.end()
 })
+
+
+test('custom key/value names', function(t) {
+  var object = {
+    apple: 'an apple',
+    banana: 'a banana'
+  }
+  var array = [{
+    name: 'apple',
+    description: 'an apple'
+  }, {
+    name: 'banana',
+    description: 'a banana'
+  }]
+
+  t.deepEqual(split(object, {key: 'name', value: 'description'}), array, 'split: Object -> Array')
+  t.deepEqual(join(array, {key: 'name', value: 'description'}), object, 'join: Array -> Object')
+  t.end()
+})

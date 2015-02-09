@@ -123,6 +123,47 @@ newSalad = Object.keys(newSalad)
 saves some complexity, enables easier chaining and removes the hassle
 of extracting the value from the object on each iteration.
 
+## Custom Key/Value Names
+
+To provide more semantic key/value names, supply a second argument to
+either `split` or `join` with the key/value mapping:
+```js
+var salad = {
+  apples: 1,
+  bananas: 3,
+  carrots: 2
+}
+
+var loudIngredients = split(salad, {key: 'name', value: 'amount'}).map(function(ingredient) {
+  ingredient.name = ingredient.name.toUpperCase()
+  ingredient.amount *= 3
+  return ingredient
+})
+
+// loudIngredients:
+// [
+//   { name: 'APPLES', amount: 3 },
+//   { name: 'BANANAS', amount: 9 },
+//   { name: 'CARROTS', amount: 6 }
+// ]
+
+var loudSalad = split.join(loudIngredients, {key: 'name', value: 'amount'})
+
+// loudSalad:
+// {
+//    APPLES: 3,
+//    BANANAS: 9,
+//    CARROTS: 6
+// }
+//
+
+```
+
+This also means you can use `join` to create an Object out of any Array
+of Objects with two properties.
+
+Remember to also supply the mapping to join otherwise it won't be able to find the correct key/value pair to re-form the object.
+
 ## License
 
 MIT
