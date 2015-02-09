@@ -4,6 +4,7 @@
   * [feature] Custom key/value names.
   * [docs] Make example more by mutating mapped object.
   * [docs] Add History.md as Changelog
+  * [docs] Recommend hughsk/flat under "See Also" in Readme.
 
 2.0.0 / 2015-02-10
 ==================

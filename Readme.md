@@ -164,6 +164,10 @@ of Objects with two properties.
 
 Remember to also supply the mapping to join otherwise it won't be able to find the correct key/value pair to re-form the object.
 
+## See Also
+
+* [hughsk/flat](https://github.com/hughsk/flat) – Flatten/unflatten nested Javascript objects (Highly recommended for use with `split-object`).
+
 ## License
 
 MIT
