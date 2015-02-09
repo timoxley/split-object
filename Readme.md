@@ -35,10 +35,9 @@ var salad = {
 
 // transform each key/value using Array.prototype.map
 var loudIngredients = split(salad).map(function(ingredient) {
-  return {
-    key:   ingredient.key.toUpperCase(),
-    value: ingredient.value * 3
-  }
+  ingredient.key = ingredient.key.toUpperCase()
+  ingredient.value *= 3
+  return ingredient
 })
 
 // loudIngredients:
