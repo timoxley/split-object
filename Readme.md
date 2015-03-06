@@ -1,5 +1,7 @@
 # split-object
 
+[![Build Status](https://travis-ci.org/timoxley/split-object.svg?branch=master)](https://travis-ci.org/timoxley/split-object)
+
 Minimal tool for working with Objects using built-in functional Array
 methods.
 
