@@ -1,3 +1,12 @@
+2.1.1 / 2016-08-10
+==================
+
+* Update dev dependencies
+* Test node 4 & 6 on travis. Drop iojs target.
+* Format with standard
+* Check code coverage with nyc
+* Update metadata
+
 2.1.0 / 2015-02-10
 ==================
 
