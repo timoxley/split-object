@@ -1,10 +1,10 @@
-"use strict"
+'use strict'
 
 module.exports = split
 module.exports.split = split
 module.exports.join = join
 
-function split(obj, opts) {
+function split (obj, opts) {
   opts = opts || {}
   var keyName = opts.key || 'key'
   var valueName = opts.value || 'value'
@@ -19,7 +19,7 @@ function split(obj, opts) {
   return items
 }
 
-function join(arr, opts) {
+function join (arr, opts) {
   opts = opts || {}
   var keyName = opts.key || 'key'
   var valueName = opts.value || 'value'

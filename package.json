@@ -4,7 +4,7 @@
   "description": "Work with Objects using built-in functional Array methods",
   "main": "index.js",
   "scripts": {
-    "test": "tape test.js | tap-spec"
+    "test": "nyc -s `which tape` test.js | tap-spec && standard && nyc report --reporter=lcov --reporter=text --reporter=html"
   },
   "keywords": [
     "object",
@@ -20,8 +20,10 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
-    "tap-spec": "^4.1.0",
-    "tape": "^4.2.0"
+    "nyc": "^7.1.0",
+    "standard": "^7.1.2",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.0"
   },
   "repository": {
     "type": "git",
